@@ -1,0 +1,41 @@
+Options All -Indexes
+Options +FollowSymlinks -MultiViews
+
+RewriteEngine On
+
+RewriteBase /story
+
+# 403 forbidden sayfa hatası yönlendirme
+ErrorDocument 403 http://localhost/story/403
+RewriteRule ^403 403.php [NC,L]
+
+# 404 sayfa hatası yönlendirme
+ErrorDocument 404 http://localhost/story/404
+RewriteRule ^404 404.php [NC,L]
+
+# SET START PAGE
+DirectoryIndex index.php
+
+# INDEX PAGE
+RewriteRule ^page-([0-9]+)$ index.php?page=$1 [QSA,NC,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ $1 [R=301,L]
+
+#BIOGRAPHY
+RewriteRule ^biyografim biyografim.php [NC,L]
+
+# BLOGS
+RewriteRule ^([^/_.]+)/([^/_.]+).([0-9]+)$ blog.php?id=$2 [QSA,NC,L]
+
+# SEARCH
+RewriteCond %{THE_REQUEST} /search(?:\.php)?\?keyword=([^&\s]+)&?([^&\s]*) [NC]
+RewriteRule ^ search/%1?%2 [R=302,L,NE]
+
+RewriteRule ^search/([^/]+)/?$ search.php?keyword=$1 [L,QSA,NC]
+
+# CATEGORY
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/admin/.*$
+RewriteRule ^([^/_.]+)/?$ category.php?id=$1 [QSA,NC,L]
+RewriteRule ^([^/_.]+)&page=([0-9]+)$ category.php?id=$1&page=$2 [QSA,NC,L]

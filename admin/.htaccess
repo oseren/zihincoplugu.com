@@ -1,0 +1,10 @@
+Options -Indexes
+Options +FollowSymlinks -MultiViews
+
+RewriteEngine On
+
+# 403 forbidden sayfa hatası yönlendirme
+ErrorDocument 403 http://localhost/story/404.php
+
+# 404 sayfa hatası yönlendirme
+ErrorDocument 404 http://localhost/story/404.php
