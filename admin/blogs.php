@@ -96,7 +96,7 @@ if (isset($_SESSION['userdata'])) {
                                                     <td> <?= date('M d Y',strtotime($result['publish_date'])) ?> </td>
                                                     <td>
 
-                                                        <div style="display: flex;">
+                                                        <div style="display: flex; width: 150px">
 
                                                             <?php 
 
