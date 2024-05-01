@@ -93,7 +93,7 @@ if (isset($_SESSION['userdata'])) {
                                                     <td> <?= $result['blog_title'] ?> </td>
                                                     <td> <?= $result['cat_name'] ?> </td>
                                                     <td> <?= $result['username'] ?> </td>
-                                                    <td> <?= date('M d Y',strtotime($result['publish_date'])) ?> </td>
+                                                    <td> <?= month_to_turkish(date('M d Y',strtotime($result['publish_date']))) ?> </td>
                                                     <td>
 
                                                         <div style="display: flex; width: 150px">
