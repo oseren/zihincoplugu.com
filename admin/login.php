@@ -63,7 +63,7 @@ if (isset($_SESSION['userdata'])) {
                     <div class="row">
                         <div class="col-12">
                             <button type="submit" name="login_btn" class="btn btn-primary btn-block">Giriş Yap</button>
-                        </div>
+                        </div> 
                     </div>
                 </form>
 
