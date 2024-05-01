@@ -8,10 +8,10 @@
 
   20 yaşındayım, belki çok komik biri değilim, belki biriyle konuşurken konu bir yerde tıkandığında konu bulamam, belki çok iyi konuşamam ağızım çok laf yapmaz ancak çok güzel severim. **Sagopa Kajmerin "Mevsimler Gibisin" şarkısında da dediği gibi "Bütün bunlara ek, benim aşkım saf ve sek"**. Belki hayatıma girecek kız ki bu duygularımı tek çırpıda silip atacak, belki hayatıma hiç böyle bir kız girmeyecek her şeyi o zaman göreceğiz.
 
-Burayı binevi benim duygularımı yazacak bir yer olarak kullanacağım çünkü bu duygularımı anlatacak ve fikir alacak bir arkadaşım yok. Evet birine anlattım bundan 3 - 4 gün önce uzun uzun yazdım o mesajları okudu mu bilmiyorum ama cevap yazmadı. Bir daha kimseye anlatmama gibi bir karar aldım. Sanki anlattığım kişilerin başını şişiriyorum gibi hissediyorum. Yine 
+Burayı binevi benim duygularımı yazacak bir yer olarak kullanacağım çünkü bu duygularımı anlatacak ve fikir alacak bir arkadaşım yok. Evet birine anlattım bundan 3 - 4 gün önce uzun uzun yazdım o mesajları okudu mu bilmiyorum ama cevap yazmadı. Bir daha kimseye anlatmama gibi bir karar aldım. Sanki anlattığım kişilerin başını şişiriyorum gibi hissediyorum.
 ```
-**Sagopa Kajmerden "Ne Olur" şarkısındaki gibi 
+Sagopa Kajmerden "Ne Olur" şarkısındaki gibi 
 "Aman ne karışık bi' trafik var içimde, keşke bilseydin"
-"Gerçi bilebilirdin bilmek isteseydin"**.
+"Gerçi bilebilirdin bilmek isteseydin"
 ```
 Bu duygum kolay kolay değişmeyecek gibi. Bütün günümü anı anına anlatacağım beni dinleyecek aynı şekilde karşımdaki kişinin bütün gününü anı anına dinlemek...
