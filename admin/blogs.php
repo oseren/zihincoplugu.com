@@ -200,7 +200,7 @@ if (isset($_SESSION['userdata'])) {
                 echo "<script type='text/javascript'>$toast('$toast_message')</script>";
             }
             unset($_SESSION['msg']);
-            ?>
+        ?>
 
         <script>
         $(function() {

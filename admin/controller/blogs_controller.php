@@ -194,6 +194,27 @@ if($g_islem == "add") {
 
         }
 
+    } else if ($g_islem == "updatesettings") {
+
+        if (!empty($_POST["blogID"]) && isset($_POST["durum"])) {
+
+            $durum = $_POST["durum"];
+            $blogID = $_POST["blogID"];
+
+            $sql4 = $config -> prepare("UPDATE blog SET commentActive=? WHERE blog_id=?");
+            $sql4 -> bind_param("ss",$durum,$blogID);
+            $sql4 -> execute();
+            
+            $_SESSION['msg']=['Blog Yorumu Başarıyla Güncellendi','toastr.success'];
+            header("location: ../blogs_edit.php?id=".$blogID);
+
+        } else {
+
+            $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
+            header("location: ../blogs.php");
+
+        }
+
     } else {
 
         $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
