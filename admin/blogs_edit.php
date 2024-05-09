@@ -121,7 +121,7 @@ $result = $row2 -> fetch_assoc();
                                                 <label>Blog Başlığı</label>
                                                 <input type="text" class="form-control" name="blog_title"
                                                     placeholder="Blog Başlığı" value="<?=$result['blog_title']?>"
-                                                    required>
+                                                    autocomplete="off" required>
                                             </div>
                                         </div>
                                     </div>

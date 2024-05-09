@@ -79,7 +79,7 @@ $result = $row1 -> fetch_assoc();
                                                 <label>Website Adı</label>
                                                 <input type="text" class="form-control" name="websitename"
                                                     placeholder="Website Adı" value="<?=$result['websitename']?>"
-                                                    required>
+                                                    autocomplete="off" required>
                                             </div>
                                         </div>
 
@@ -114,7 +114,7 @@ $result = $row1 -> fetch_assoc();
 
 
                                     <input type="submit" value="Kaydet" class="btn btn-primary">
-                                    <input type="hidden" name="islem" value="generalsettings" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="generalsettings">
 
                                 </form>
 
@@ -142,7 +142,7 @@ $result = $row1 -> fetch_assoc();
                                                 <label>İnstagram</label>
                                                 <input type="text" class="form-control" name="instagramlink"
                                                     placeholder="Website Başlığı" value="<?=$result['instagramlink']?>"
-                                                    required>
+                                                    autocomplete="off" required>
                                             </div>
                                         </div>
 
@@ -152,7 +152,7 @@ $result = $row1 -> fetch_assoc();
                                                 <label>Twitter</label>
                                                 <input type="text" class="form-control" name="twitterlink"
                                                     placeholder="Website Adı" value="<?=$result['twitterlink']?>"
-                                                    required>
+                                                    autocomplete="off" required>
 
                                             </div>
 
@@ -164,7 +164,7 @@ $result = $row1 -> fetch_assoc();
                                                 <label>Pinterest</label>
                                                 <input type="text" class="form-control" name="pinterestlink"
                                                     placeholder="Website Adı" value="<?=$result['pinterestlink']?>"
-                                                    required>
+                                                    autocomplete="off" required>
 
                                             </div>
 
@@ -172,7 +172,7 @@ $result = $row1 -> fetch_assoc();
                                     </div>
 
                                     <input type="submit" value="Kaydet" class="btn btn-primary">
-                                    <input type="hidden" name="islem" value="socialmedia" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="socialmedia">
 
                                 </form>
 

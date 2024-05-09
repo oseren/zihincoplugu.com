@@ -69,13 +69,13 @@ if ($_SESSION["userdata"]["2"] == 0) {
                                             <div class="form-group">
                                                 <label>Kategori Adı</label>
                                                 <input type="text" class="form-control" name="cat_name"
-                                                    placeholder="Kategori Adı" required>
+                                                    placeholder="Kategori Adı" autocomplete="off" required>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <input type="submit" name="add_cat" value="Kaydet" class="btn btn-primary">
-                                    <input type="hidden" name="islem" value="add" class="btn btn-primary">
+                                    <input type="submit" value="Kaydet" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="add">
 
                                 </form>
 

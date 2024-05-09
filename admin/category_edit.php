@@ -84,12 +84,12 @@ $result = $row1 -> fetch_assoc();
                                                 <label>Kategori Adı</label>
                                                 <input type="text" class="form-control" name="cat_name"
                                                     placeholder="Kategori Adı" value="<?= $result['cat_name'];?>"
-                                                    required>
+                                                    autocomplete="off" required>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <input type="submit" name="update_cat" value="Kaydet" class="btn btn-primary">
+                                    <input type="submit" value="Kaydet" class="btn btn-primary">
                                     <input type="hidden" name="catID" value="<?= $id ?>">
                                     <input type="hidden" name="islem" value="update">
 

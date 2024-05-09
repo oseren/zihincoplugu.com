@@ -69,7 +69,7 @@ if ($_SESSION["userdata"]["2"] == 0) {
                                             <div class="form-group">
                                                 <label>Kullanıcı Adı</label>
                                                 <input type="text" class="form-control" name="username"
-                                                    placeholder="Kullanıcı Adı" required>
+                                                    placeholder="Kullanıcı Adı" autocomplete="off" required>
                                             </div>
 
                                         </div>
@@ -78,7 +78,7 @@ if ($_SESSION["userdata"]["2"] == 0) {
                                             <div class="form-group">
                                                 <label>Kullanıcı Maili</label>
                                                 <input type="email" class="form-control" name="email"
-                                                    placeholder="Kullanıcı Maili" required>
+                                                    placeholder="Kullanıcı Maili" autocomplete="off" required>
                                             </div>
                                         </div>
 
@@ -87,7 +87,7 @@ if ($_SESSION["userdata"]["2"] == 0) {
                                             <div class="form-group">
                                                 <label>Kullanıcı Şifresi</label>
                                                 <input type="password" class="form-control" name="password"
-                                                    placeholder="Kullanıcı Şifresi" required>
+                                                    placeholder="Kullanıcı Şifresi" autocomplete="off" required>
                                             </div>
 
                                         </div>
@@ -110,8 +110,8 @@ if ($_SESSION["userdata"]["2"] == 0) {
                                         </div>
                                     </div>
 
-                                    <input type="submit" name="add_user" value="Kaydet" class="btn btn-primary">
-                                    <input type="hidden" name="islem" value="add" class="btn btn-primary">
+                                    <input type="submit" value="Kaydet" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="add">
 
                                 </form>
 

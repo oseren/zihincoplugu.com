@@ -94,7 +94,7 @@ $result = $row1 -> fetch_assoc();
                                             <div class="form-group">
                                                 <label>İsmin</label>
                                                 <input type="text" class="form-control" name="biographyname"
-                                                    placeholder="İsmin" value="<?=$result['biographyname']?>" required>
+                                                    placeholder="İsmin" value="<?=$result['biographyname']?>" autocomplete="off" required>
                                             </div>
                                         </div>
 
@@ -129,7 +129,7 @@ $result = $row1 -> fetch_assoc();
                                         </div>
                                     </div>
 
-                                    <input type="submit" name="biographysave" value="Kaydet" class="btn btn-primary">
+                                    <input type="submit" value="Kaydet" class="btn btn-primary">
 
                                 </form>
 

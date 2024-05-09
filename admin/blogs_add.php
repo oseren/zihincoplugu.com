@@ -78,7 +78,7 @@ $row1 = $sql1 -> get_result();
                                             <div class="form-group">
                                                 <label>Blog Başlığı</label>
                                                 <input type="text" class="form-control" name="blog_title"
-                                                    placeholder="Blog Başlığı" required>
+                                                    placeholder="Blog Başlığı" autocomplete="off" required>
                                             </div>
                                         </div>
                                     </div>
@@ -135,7 +135,7 @@ $row1 = $sql1 -> get_result();
                                     </div>
 
                                     <input type="submit" value="Kaydet" class="btn btn-primary">
-                                    <input type="hidden" name="islem" value="add" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="add">
 
                                 </form>
 
