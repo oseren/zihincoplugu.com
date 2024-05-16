@@ -1,4 +1,13 @@
+<?php 
 
+$url = $_SERVER['REQUEST_URI'];
+
+$url_parts = explode("/", $url);
+$extension = end($url_parts);
+
+$urlname = $url_parts[2];
+
+?>
 <?php 
 
 $sql3 = $config -> prepare("SELECT websitename,instagramlink,twitterlink,pinterestlink FROM main");
@@ -35,6 +44,49 @@ $data = $row3 -> fetch_assoc();
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="d-none d-lg-block row py-3">
+          
+          
+          <div class="col-12 col-sm-12 col-lg-12 site-navigation text-center">
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu" style="padding-left: 0px;">
+            <?php 
+            
+            $sqlD = $config -> prepare("SELECT c.*, COUNT(b.blog_id) as blog_count 
+            FROM categories c
+            LEFT JOIN blog b ON c.cat_id = b.category AND b.active = 1
+            GROUP BY c.cat_id, c.cat_name");
+
+            $sqlD -> execute();
+
+            $queryD = $sqlD -> get_result();
+            ?>
+
+            <li class="<?= ($urlname=="zihninibosalt")? 'active':''; ?>"><a href="zihninibosalt">Zihnini Boşalt</a></li>
+
+            <?php while ($row = mysqli_fetch_assoc($queryD)) { ?>
+            <?php if ( $row['blog_count'] > 0) { ?>
+            <li class="<?= ($urlname==url_slug($row['cat_name']))? 'active':''; ?>">
+
+                <a href="<?= url_slug($row['cat_name']) ?>">
+
+                    <?= $row['cat_name'] ?>
+
+                </a>
+
+            </li>
+
+
+
+            <?php } ?>
+
+            <?php } ?>
+                <li><a href="index.html">Rastgele Bir Blog</a></li>
+            </ul>
+
+          </div>
+
         </div>
     </nav>
 </div>

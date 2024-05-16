@@ -11,7 +11,7 @@ if ($_SESSION["userdata"]["2"] == 0) {
 
 <?php 
 
-$sql1 = $config -> prepare("SELECT websitename,instagramlink,twitterlink,pinterestlink FROM main");
+$sql1 = $config -> prepare("SELECT websitename,instagramlink,twitterlink,pinterestlink,questionText FROM main");
 $sql1 -> execute();
 $row1 = $sql1 -> get_result();
 $result = $row1 -> fetch_assoc();
@@ -173,6 +173,38 @@ $result = $row1 -> fetch_assoc();
 
                                     <input type="submit" value="Kaydet" class="btn btn-primary">
                                     <input type="hidden" name="islem" value="socialmedia">
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <h3 class="card-title">Zihnini Boşalt Sayfası Ayarları</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+
+                                <form action="controller/settings_controller.php" method="post">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Açıklama Metni</label>
+                                                    <textarea class="form-control" placeholder="Zihnini Boşalt Sayfasındaki Açıklama Yazısı" name="questionText" required><?=$result['questionText']?></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" value="Kaydet" class="btn btn-primary">
+                                    <input type="hidden" name="islem" value="questionpage">
 
                                 </form>
 

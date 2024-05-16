@@ -125,7 +125,7 @@ if ($g_islem == "generalsettings") {
             }
             
         } else {
-            $_SESSION['msg']=['İnstagram, Twitter, Pinterest alanları boş olamazs','toastr.warning'];
+            $_SESSION['msg']=['İnstagram, Twitter, Pinterest alanları boş olamaz','toastr.warning'];
             header("location: ../settings.php");
         }
     
@@ -134,12 +134,36 @@ if ($g_islem == "generalsettings") {
     }
 
 
+} elseif ($g_islem == "questionpage") {
+    if ($_SESSION["userdata"]["2"] == 1) {
+
+        if (!empty($_POST["questionText"])) {
+
+            $questionText = mysqli_real_escape_string($config,$_POST['questionText']);
+
+            $sql4 = $config -> prepare("UPDATE main SET questionText=?");
+            $sql4 -> bind_param("s",$questionText);
+            $sql4 -> execute();
+
+            if ($sql4) {
+                $_SESSION['msg']=['Zihnini boşalt sayfası ayarları başarıyla güncellendi','toastr.success'];
+                header("location: ../settings.php");
+            } else {
+                $_SESSION['msg']=['Bir hata oluştu','toastr.error'];
+                header("location: ../settings.php");
+            }
+            
+        } else {
+            $_SESSION['msg']=['Açıklama metni alanı boş olamaz','toastr.warning'];
+            header("location: ../settings.php");
+        }
+    
+    } else {
+        header("location: ../index.php");
+    }
 } else {
     $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
     header("location: ../index.php");
 }
-
-
-
 
 ?>

@@ -126,31 +126,10 @@ if($g_islem == "confirm") {
             header("location: ../blog_comments.php?id=$blogID"); 
         }
         
-} elseif ($g_islem == "active") {
+} else {
 
-        if (!empty($_GET["id"]) && isset($_GET["status"])) {
-
-            $id = $_GET["id"];
-            $status = $_GET["status"];
-
-            $sql4 = $config -> prepare("UPDATE blog SET active=? WHERE blog_id=?");
-            $sql4 -> bind_param("ss",$status,$id);
-            $sql4 -> execute();
-
-            $_SESSION['msg']=['Blog Başarıyla Güncellendi','toastr.success'];
-            header("location: ../blogs.php");
-            
-        } else {
-
-            $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
-            header("location: ../blogs.php");
-
-        }
-
-    } else {
-
-        $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
-        header("location: ../blogs.php");
+    $_SESSION['msg'] = ['Bir hata oluştu','toastr.error'];
+    header("location: ../comments.php");
 
 }
 ?>

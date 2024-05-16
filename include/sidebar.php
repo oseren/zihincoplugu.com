@@ -29,7 +29,7 @@ $result = $row2 -> fetch_assoc();
         </div>
     </div>
 </div>
-<div class="floating-block sticky-top text-center">
+<!-- <div class="floating-block sticky-top text-center">
     <h2 class="mb-3 text-black">Kategoriler</h2>
     <div class="categories">
         <ul class="list-unstyled">
@@ -47,7 +47,7 @@ $result = $row2 -> fetch_assoc();
             <?php } ?>
         </ul>
     </div>
-</div>
+</div> -->
 
 <style>
 .categories li,

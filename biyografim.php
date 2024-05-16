@@ -18,9 +18,9 @@ $post = $row1 -> fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="og:type" content="website" />
-    <meta name="og:title" content="<?=ucfirst($post["blog_title"])?>" />
+    <meta name="og:title" content="Biyografim • <?=$dataname["websitename"]?>" />
     <meta name="og:image" content="https://localhost/story/admin/pictures/<?=$img ?>" />
-    <meta name="og:description" content="<?= strip_tags(substr($post['blog_body'], 0,280))."..." ?>" />
+    <meta name="og:description" content="<?= strip_tags(substr($post['biography'], 0,280))."..." ?>" />
 
     <title>Biyografim • <?=$dataname["websitename"]?></title>
     <link rel="shortcut icon" href="<?=$dataname["favicon"]?>">

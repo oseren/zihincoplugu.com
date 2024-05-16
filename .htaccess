@@ -1,6 +1,8 @@
 Options All -Indexes
 Options +FollowSymlinks -MultiViews
 
+Header set Access-Control-Allow-Origin "*"
+
 RewriteEngine On
 
 RewriteBase /story
@@ -24,6 +26,10 @@ RewriteRule ^(.*)index.php$ $1 [R=301,L]
 
 #BIOGRAPHY
 RewriteRule ^biyografim biyografim.php [NC,L]
+
+#QUESTION
+RewriteRule ^zihninibosalt question.php [NC,L]
+RewriteRule ^question question.php [NC,L]
 
 # BLOGS
 RewriteRule ^([^/_.]+)/([^/_.]+).([0-9]+)$ blog.php?id=$2 [QSA,NC,L]

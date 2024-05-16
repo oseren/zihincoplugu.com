@@ -113,7 +113,7 @@ if(!empty($_POST["action"])) {
                                         </div>
                                         <div class="comment-body">
 
-                                        <h3>'.$key["name"].'</h3>
+                                        <h3>'.$key["name"].'</h3> 
 
                                         <div class="meta">'.time_elapsed_string($key["submitDate"]).'</div>
                                             <p>'.$key["content"].'</p>
@@ -166,7 +166,7 @@ if(!empty($_POST["action"])) {
                                         </div>
                                         <div class="comment-body">
 
-                                        <h3>'.$key["name"].'</h3>
+                                        <h3>'.$key["name"].' <span class="meta" style="color: #a4c639; vertical-align: middle;"> Yazar </span></h3>
 
                                         <div class="meta">'.time_elapsed_string($key["submitDate"]).'</div>
                                             <p>'.$key["content"].'</p>

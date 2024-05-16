@@ -77,7 +77,7 @@ if (isset($_SESSION['userdata'])) {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php 
+                                            <?php 
 
                                             $sql = $config -> prepare("SELECT * FROM blog LEFT JOIN categories ON blog.category=categories.cat_id LEFT JOIN user ON blog.author_id=user.user_id ORDER BY blog.publish_date DESC");
                                             $sql -> execute();

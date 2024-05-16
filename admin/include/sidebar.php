@@ -2,15 +2,19 @@
 
 <?php 
 
-$sqlcount = $config -> prepare("SELECT 
-COUNT(DISTINCT blog.blog_id) AS blog_count,
-COUNT(DISTINCT user.user_id) AS user_count,
-COUNT(DISTINCT categories.cat_id) AS category_count,
-(SELECT COUNT(*) FROM comments) AS total_comments
-FROM 
-blog 
-LEFT JOIN user ON 1=1
-LEFT JOIN categories ON 1=1");
+$sqlcount = $config->prepare("
+    SELECT 
+        COUNT(DISTINCT blog.blog_id) AS blog_count,
+        COUNT(DISTINCT user.user_id) AS user_count,
+        COUNT(DISTINCT categories.cat_id) AS category_count,
+        (SELECT COUNT(*) FROM comments) AS total_comments,
+        COUNT(DISTINCT questions.id) AS question_count
+    FROM 
+        blog 
+        LEFT JOIN user ON 1=1
+        LEFT JOIN categories ON 1=1
+        LEFT JOIN questions ON 1=1
+");
 $sqlcount -> execute();
 $rowcount = $sqlcount -> get_result();
 $resultcount = $rowcount -> fetch_assoc();
@@ -66,6 +70,16 @@ $resultcount = $rowcount -> fetch_assoc();
                     <p>
                         Yorumlar
                         <span class="right badge badge-danger"><?=$resultcount["total_comments"]?></span>
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="questions.php" class="nav-link <?= ($page=="questions")? 'active':''; ?>">
+                    <i class="nav-icon fas fa-question"></i>
+                    <p>
+                        Sorular
+                        <span class="right badge badge-danger"><?=$resultcount["question_count"]?></span>
                     </p>
                 </a>
             </li>
