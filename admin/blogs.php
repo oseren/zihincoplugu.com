@@ -73,6 +73,7 @@ if (isset($_SESSION['userdata'])) {
                                                     <th>Kategorisi</th>
                                                     <th>Yazarı</th>
                                                     <th>Tarih</th>
+                                                    <th>Beğenme S</th>
                                                     <th>İşlemler</th>
                                                 </tr>
                                             </thead>
@@ -94,6 +95,7 @@ if (isset($_SESSION['userdata'])) {
                                                     <td> <?= $result['cat_name'] ?> </td>
                                                     <td> <?= $result['username'] ?> </td>
                                                     <td> <?= month_to_turkish(date('M d Y',strtotime($result['publish_date']))) ?> </td>
+                                                    <td style="width: 110px"> <?= ($result['likes'] == 0)? 'Beğenilme Yok':$result['likes']; ?></td>
                                                     <td style="width: 250px">
 
                                                         <div style="display: flex">
