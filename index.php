@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <?php include "admin/include/config.php"; ?>
 <?php include "admin/func.php"; ?>
 
@@ -32,9 +33,6 @@ $sql1 = $config->prepare("SELECT * FROM blog LEFT JOIN categories ON blog.catego
 $sql1->execute();
 $rows = $sql1->get_result();
 ?>
-
-<!doctype html>
-<html lang="en">
 
 <head>
     <meta charset="utf-8">

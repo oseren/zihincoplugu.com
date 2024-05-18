@@ -94,9 +94,9 @@ if (isset($_SESSION['userdata'])) {
                                                     <td> <?= $result['cat_name'] ?> </td>
                                                     <td> <?= $result['username'] ?> </td>
                                                     <td> <?= month_to_turkish(date('M d Y',strtotime($result['publish_date']))) ?> </td>
-                                                    <td>
+                                                    <td style="width: 250px">
 
-                                                        <div style="display: flex; width: 150px">
+                                                        <div style="display: flex">
 
                                                             <?php 
 
@@ -132,13 +132,13 @@ if (isset($_SESSION['userdata'])) {
                                                             ?>
 
                                                             <a href="blogs_edit.php?id=<?= $result['blog_id'] ?>"
-                                                                class="btn btn-sm btn-success">Düzenle</a>
+                                                                class="btn btn-sm btn-success mr-1">Düzenle</a>
 
                                                             <?php
                                                                 
                                                                 if ($_SESSION["userdata"]["2"] == 1) { ?>
 
-                                                            <form class="ml-1" action="controller/blogs_controller.php"
+                                                            <form action="controller/blogs_controller.php"
                                                                 method="POST"
                                                                 onsubmit="return confirm('Silmek istediğine emin misin?')">
 

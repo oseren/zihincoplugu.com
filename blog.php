@@ -76,6 +76,7 @@ if (empty($id)) {
 <!doctype html>
 <html lang="en">
 
+<?php $img=$post['blog_image'] ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -112,7 +113,6 @@ if (empty($id)) {
 
     <div class="featured-post single-article">
         <div class="container">
-            <?php $img=$post['blog_image'] ?>
             <div class="post-slide single-page"
                 style="background-image: url('admin/pictures/<?= $img ?>'); border-radius: 10px;">
                 <div class="text-wrap pb-5" style="border-radius: 10px;">
