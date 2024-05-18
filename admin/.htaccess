@@ -1,8 +1,6 @@
 Options -Indexes
 Options +FollowSymlinks -MultiViews
 
-Header set Access-Control-Allow-Origin "*"
-
 RewriteEngine On
 
 # 403 forbidden sayfa hatası yönlendirme

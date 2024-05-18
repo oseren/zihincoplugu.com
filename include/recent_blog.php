@@ -26,7 +26,7 @@ $rows = $sql1 -> get_result();
                     <div class="media">
                         <a href="<?= url_slug($result['cat_name']) ?>/<?= url_slug($result['blog_title']) ?>.<?= $result['blog_id'] ?>">
                             <?php $img=$result['blog_image'] ?>
-                            <img src="admin/pictures/<?= $img ?>" alt="Image" class="img-fluid" style="border-radius: 10px; aspect-ratio: 1 / 1; object-fit: cover;">
+                            <img src="admin/pictures/<?= $img ?>" alt="Image" width="750" height="750" class="img-fluid" style="border-radius: 10px; aspect-ratio: 1 / 1; object-fit: cover;">
 
                         </a>
                     </div>

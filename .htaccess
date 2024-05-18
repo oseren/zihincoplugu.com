@@ -1,8 +1,6 @@
 Options All -Indexes
 Options +FollowSymlinks -MultiViews
 
-Header set Access-Control-Allow-Origin "*"
-
 RewriteEngine On
 
 RewriteBase /story
